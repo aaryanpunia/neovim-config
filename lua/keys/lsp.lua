@@ -6,14 +6,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "K", vim.lsp.buf.hover)
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 		vim.keymap.set("n", "<C-e>", vim.diagnostic.open_float)
-		vim.keymap.set("n", "W", function() 
+		vim.keymap.set("n", "W", function()
 			local params = vim.lsp.util.make_formatting_params({})
-   			local handler = function(err, result)
+			local handler = function(err, result)
 				if not result then return end
 				vim.lsp.util.apply_text_edits(result, bufnr, client.offset_encoding)
 				vim.cmd('write')
 			end
 			client.request('textDocument/formatting', params, handler, bufnr)
-  			end, {buffer = bufnr})
+		end, { buffer = bufnr })
 	end
 })
