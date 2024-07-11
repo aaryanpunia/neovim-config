@@ -17,6 +17,8 @@ return {
 			}
 			lspconfig.tsserver.setup {}
 			lspconfig.lua_ls.setup {}
+			lspconfig.zls.setup {}
+			lspconfig.jsonls.setup {}
 		end,
 	}
 }

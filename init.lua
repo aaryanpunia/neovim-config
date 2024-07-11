@@ -1,4 +1,5 @@
 require("config.lazy")
 require("keys.lsp")
 require("keys.navigation")
+require("keys.typing")
 require("opts.number")
