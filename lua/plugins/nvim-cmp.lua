@@ -77,6 +77,9 @@ return {
 			require('lspconfig')['rust_analyzer'].setup {
 				capabilities = capabilities
 			}
+			require('lspconfig')['pylsp'].setup {
+				capabilities = capabilities
+			}
 		end
 	},
 	{

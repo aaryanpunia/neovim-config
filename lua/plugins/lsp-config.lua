@@ -19,6 +19,7 @@ return {
 			lspconfig.lua_ls.setup {}
 			lspconfig.zls.setup {}
 			lspconfig.jsonls.setup {}
+			lspconfig.pylsp.setup {}
 		end,
 	}
 }

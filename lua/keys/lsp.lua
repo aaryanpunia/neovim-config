@@ -2,7 +2,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local bufnr = args.buf
 		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		local opts = { buffer = bufnr, noremap = true, silent = true }
 		vim.keymap.set("n", "K", vim.lsp.buf.hover)
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition)
 		vim.keymap.set("n", "<C-e>", vim.diagnostic.open_float)
